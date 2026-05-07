@@ -2,8 +2,8 @@
 
 ```
 docker run -d \
-        -p 4500:3000 \
-        -e API_BASE_URL=http://102.16.254.6:9000 \
-        --name alofo_backoffice_fe \
-        lucienozandry/alofo-backoffice-fe:latest
+        -p 3500:3000 \
+        -e API_BASE_URL=https://maboo.mg \
+        --name maboo_admin_fe \
+        lucienozandry/maboo-admin-fe:latest
 ```

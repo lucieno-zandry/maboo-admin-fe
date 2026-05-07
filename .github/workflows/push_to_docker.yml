@@ -32,4 +32,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/alofo-backoffice-fe:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/maboo-admin-fe:latest
