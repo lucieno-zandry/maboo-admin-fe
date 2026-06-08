@@ -21,7 +21,7 @@ function getEnv() {
         API_URL: process.env.API_BASE_URL
             ? process.env.API_BASE_URL + "/api"
             : "http://localhost:8000/api",
-        SUPPORT_EMAIL: process.env.SUPPORT_EMAIL || "support@alofo.com",
+        SUPPORT_EMAIL: process.env.SUPPORT_EMAIL || "support@wle.com",
     };
 }
 
