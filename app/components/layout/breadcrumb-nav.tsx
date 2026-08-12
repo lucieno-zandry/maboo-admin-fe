@@ -1,4 +1,5 @@
 // components/ui/breadcrumb-nav.tsx
+import React from "react";
 import { useLocation, Link } from "react-router";
 import {
     Breadcrumb,
@@ -88,8 +89,8 @@ export default function BreadcrumbNav() {
         <Breadcrumb>
             <BreadcrumbList>
                 {breadcrumbs.map((crumb, idx) => (
-                    <>
-                        <BreadcrumbItem key={crumb.path}>
+                    <React.Fragment key={crumb.path}>
+                        <BreadcrumbItem>
                             {crumb.isLast ? (
                                 <BreadcrumbPage>{crumb.label}</BreadcrumbPage>
                             ) : (
@@ -99,7 +100,7 @@ export default function BreadcrumbNav() {
                             )}
                         </BreadcrumbItem>
                         {!crumb.isLast && <BreadcrumbSeparator key={`sep-${idx}`} />}
-                    </>
+                    </React.Fragment>
                 ))}
             </BreadcrumbList>
         </Breadcrumb>

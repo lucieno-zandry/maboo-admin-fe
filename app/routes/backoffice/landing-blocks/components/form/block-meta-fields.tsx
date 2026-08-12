@@ -19,7 +19,7 @@ type BlockMetaFieldsViewProps = {
 
     onChange: (field: keyof LandingBlockFormData, value: any) => void;
     onFileChange: (file: File | null) => void;
-    onRemoveImage: () => void; 
+    onRemoveImage: () => void;
 };
 
 export function BlockMetaFieldsView({
@@ -193,12 +193,14 @@ export function BlockMetaFields({ errors = {} }: BlockMetaFieldsProps) {
 
     const existingImageUrl = editingBlock?.image?.url ?? null;
 
+    useEffect(() => {
+        if (existingImageUrl)
+            setPreview(existingImageUrl);
+    }, []);
+
     // Handle preview generation
     useEffect(() => {
-        if (!formData.image) {
-            setPreview(null);
-            return;
-        }
+        if (!formData.image) return;
 
         const url = URL.createObjectURL(formData.image);
         setPreview(url);
@@ -219,21 +221,20 @@ export function BlockMetaFields({ errors = {} }: BlockMetaFieldsProps) {
 
     const handleRemoveImage = () => {
         setFormData({ image: null });
+        setPreview(null);
 
         if (mode === 'edit') {
             setFormData({ remove_image: true });
         }
     };
 
-    const previewUrl =
-        preview || (existingImageUrl && !formData.image ? existingImageUrl : null);
 
     return (
         <BlockMetaFieldsView
             formData={formData}
             errors={errors}
             mode={mode}
-            previewUrl={previewUrl}
+            previewUrl={preview}
             onChange={(field, value) =>
                 setFormData({ [field]: value })
             }
