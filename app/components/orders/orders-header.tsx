@@ -17,7 +17,6 @@ export function OrdersHeaderView({ onExport }: OrdersHeaderViewProps) {
 export default function OrdersHeader() {
     const handleExport = () => {
         // TODO: implement export
-        console.log('Export clicked');
     };
     return <OrdersHeaderView onExport={handleExport} />;
 }

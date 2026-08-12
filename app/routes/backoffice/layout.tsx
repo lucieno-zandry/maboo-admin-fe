@@ -44,7 +44,6 @@ export async function clientLoader({ params }: LoaderFunctionArgs) {
 
         return;
     } catch (error) {
-        console.log(error);
         if (error instanceof HttpException) {
             if (error.status === 401) {
                 return redirect(`/${lang}/auth`);

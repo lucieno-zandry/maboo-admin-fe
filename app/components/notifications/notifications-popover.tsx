@@ -6,13 +6,12 @@ import { NotificationList } from "./components/notification-list";
 
 import {
     Popover,
+    PopoverAnchor,
     PopoverContent,
-    PopoverTrigger,
 } from "~/components/ui/popover";
 
-import { Button } from "~/components/ui/button";
-import { Bell } from "lucide-react";
 import { NotificationBell } from "./components/notification-bell";
+import { useState } from "react";
 
 /**
  * Notifications Popover
@@ -21,19 +20,17 @@ import { NotificationBell } from "./components/notification-bell";
  */
 export function NotificationsPopover() {
     useNotifications();
+    const [open, setOpen] = useState(false);
 
     return (
-        <Popover>
-            {/* ── Trigger ───────────────────────────────────────────── */}
-            <PopoverTrigger>
-                <NotificationBell />
-            </PopoverTrigger>
-
+        <Popover open={open} onOpenChange={setOpen}>
+            <PopoverAnchor>
+                <NotificationBell onClick={() => setOpen(true)} />
+            </PopoverAnchor>
             {/* ── Content ───────────────────────────────────────────── */}
             <PopoverContent
                 align="end"
-                className="w-[380px] p-0 shadow-lg"
-            >
+                className="w-[380px] p-0 shadow-lg">
                 <div className="flex max-h-[500px] flex-col overflow-hidden rounded-xl border bg-card">
 
                     {/* Header */}

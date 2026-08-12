@@ -250,7 +250,7 @@ export default function OrdersTable({
     };
 
     const handleCancelOrder = (order: Order) => {
-        console.log('Cancel order', order.uuid);
+        
     };
 
     const onViewTransaction = (transaction: Transaction) => {

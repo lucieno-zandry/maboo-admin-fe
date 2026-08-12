@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import { LockKeyhole, ShieldCheck, LogOut, ArrowLeft } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import useRouterStore from "~/hooks/use-router-store";
+import isCsr from "~/lib/is-csr";
 
 export default function () {
     const navigate = useNavigate();
@@ -62,7 +63,7 @@ export default function () {
                     <p className="text-xs text-muted-foreground max-w-[280px]">
                         Your current account permissions do not allow viewing
                         <span className="font-mono bg-muted px-1 mx-1 rounded text-[10px]">
-                            {window.location.pathname}
+                            {isCsr() && window.location.pathname}
                         </span>
                     </p>
                 </div>

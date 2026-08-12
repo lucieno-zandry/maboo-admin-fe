@@ -137,7 +137,6 @@ export const useShippingMethodsStore = create<ShippingMethodsState>((set, get) =
 
             return true;
         } catch (e) {
-            console.log(e);
             if (e instanceof HttpException)
                 toast.error(e.data.message || "Failed to remove method!");
         } finally {
@@ -223,7 +222,6 @@ export const useShippingMethodsStore = create<ShippingMethodsState>((set, get) =
                 return true;
             }
         } catch (e) {
-            console.log(e);
             if (e instanceof HttpException)
                 toast.error(e.data.message || "Failed to remove method!");
         } finally {
