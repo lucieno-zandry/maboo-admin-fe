@@ -10,6 +10,7 @@ import { ReviewedTransactionsTab } from "./reviewed-transactions-tab";
 import { ReviewedRefundsTab } from "./reviewed-refunds-tab";
 import { UserStatusesTab } from "./user-statuses-tab";
 import { UserSetStatusesTab } from "./user-set-statuses-tab";
+import type { User } from "wle-core";
 
 interface UserDetailTabsProps {
     user: User;

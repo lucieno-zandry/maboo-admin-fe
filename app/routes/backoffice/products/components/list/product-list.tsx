@@ -15,6 +15,7 @@ import appNavigate from '~/lib/app-navigate';
 import { ProductListSkeleton } from './product-list-skeleton';
 import { ProductListItem } from './product-list-item';
 import useProductDeleteDialogStore from '../../stores/use-product-delete-dialog-store';
+import type { Product } from 'wle-core';
 
 // Dumb Component
 interface ProductListViewProps {

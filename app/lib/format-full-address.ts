@@ -1,3 +1,5 @@
+import type { Address } from "wle-core";
+
 export function formatFullAddress(addr: Address): string {
     const parts = [addr.line1];
     if (addr.line2) parts.push(addr.line2);

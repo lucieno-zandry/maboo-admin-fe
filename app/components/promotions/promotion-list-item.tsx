@@ -19,6 +19,7 @@ import {
 import { cn } from "~/lib/utils";
 import { isAfter, isBefore, parseISO } from "date-fns";
 import { PromotionTargetingBadge } from "./promotion-targeting-badge";
+import type { Promotion } from "wle-core";
 
 // ── Status helper (exported so detail panel reuses it) ────────────────────────
 

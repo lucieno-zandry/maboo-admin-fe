@@ -7,6 +7,7 @@ import { HttpException, ValidationException } from "~/api/app-fetch";
 import { toast } from "sonner";
 import { deleteCategory } from "~/api/http-requests";
 import { useCategoryStore } from "~/hooks/use-category-store";
+import type { Category } from "wle-core";
 
 type CategoryDeleteDialogProps = {
     category: Category | null,

@@ -7,6 +7,7 @@ import { ScrollArea } from "../ui/scroll-area";
 import { Skeleton } from "../ui/skeleton";
 import { CodeListItem } from "./code-list-item";
 import { cn } from "~/lib/utils";
+import type { ClientCode } from "wle-core";
 
 export type CodeListPanelProps = {
     codes: ClientCode[];

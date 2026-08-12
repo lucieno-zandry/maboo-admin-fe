@@ -16,6 +16,7 @@ import type { ProductEditorController } from "./product-editor.controller";
 import { useStep3Variants } from "./step-3-variants.controller";
 import getCurrency from "~/lib/get-currency";
 import { isDraftImageExisting } from "~/lib/draft-images-helpers";
+import type { ProductDraft } from "~/types/drafts";
 
 type Step3VariantsProps = {
     draft: ProductDraft;

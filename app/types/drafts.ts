@@ -1,26 +1,28 @@
-type DraftImage = AppImage | File;
+import type { AppImage } from "wle-core";
+
+export type DraftImage = AppImage | File;
 
 // ── Variant draft types ──────────────────────────────────────────────────────
 
-type DraftOption = {
+export type DraftOption = {
     tempId: string;  // real id (as string) for existing, uid() for new
     value: string;
     isNew?: boolean;
 };
 
-type DraftVariantGroup = {
+export type DraftVariantGroup = {
     tempId: string;
     name: string;
     options: DraftOption[];
     isNew?: boolean;
 };
 
-type DraftVariantOptionRef = {
+export type DraftVariantOptionRef = {
     groupTempId: string;
     optionTempId: string;
 };
 
-type DraftVariant = {
+export type DraftVariant = {
     tempId: string;
     sku: string;
     price: string;
@@ -33,7 +35,7 @@ type DraftVariant = {
 
 // ── The full product draft ───────────────────────────────────────────────────
 
-type ProductDraft = {
+export type ProductDraft = {
     // Step 1
     title: string;
     slug: string;

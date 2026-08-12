@@ -14,6 +14,7 @@ import {
 import { Label } from "~/components/ui/label";
 import { Textarea } from "~/components/ui/textarea";
 import { Input } from "~/components/ui/input";
+import type { User } from "wle-core";
 
 interface UserActionsProps {
     user: User; // Note: Ensure User type is imported if strictly typed in your environment

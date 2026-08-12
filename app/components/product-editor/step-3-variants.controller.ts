@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import type { DraftVariant, DraftVariantGroup } from "~/types/drafts";
 
 export function useStep3Variants(
     variants: DraftVariant[],

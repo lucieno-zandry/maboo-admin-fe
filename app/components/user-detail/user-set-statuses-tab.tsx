@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
 import { UserCheck, Calendar, Clock, FileText, Fingerprint, ExternalLink } from "lucide-react";
 import { Link } from "react-router"; // Or your preferred router
+import type { UserStatus } from "wle-core";
 
 // Dumb view
 function SetStatusesView({ statuses }: { statuses: UserStatus[] }) {

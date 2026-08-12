@@ -11,6 +11,7 @@ import {
 } from "~/components/ui/select";
 import type { FieldErrors, FormImageEntry } from "../../types/product-form-types";
 import { FieldError } from "./form-error-banner";
+import type { Category } from "wle-core";
 
 
 type Props = {

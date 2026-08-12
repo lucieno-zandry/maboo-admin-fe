@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { ShoppingCart, ExternalLink, Trash2, Package } from "lucide-react";
+import type { CartItem } from "wle-core";
 
 function CartItemsView({ items }: { items: CartItem[] }) {
     const cartTotal = items.reduce((acc, item) => acc + Number(item.total), 0);

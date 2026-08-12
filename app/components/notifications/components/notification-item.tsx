@@ -16,6 +16,7 @@ import { cn } from "~/lib/utils";
 import { NotificationIcon } from "./notification-icon";
 import { timeAgo } from "../helpers/notification-helpers";
 import type { NotificationMeta } from "../types/notification-types";
+import type { AppNotification } from "wle-core";
 
 type NotificationItemViewProps = {
     notification: AppNotification;

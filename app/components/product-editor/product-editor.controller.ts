@@ -7,6 +7,7 @@ import { useRefetchProducts } from "~/hooks/use-product-list-store";
 import useRouterStore from "~/hooks/use-router-store";
 import { buildFullCreateFormData, buildFullUpdateFormData } from "~/lib/build-formdata";
 import { productToEditorDraft } from "~/lib/product-to-editor-draft";
+import type { DraftOption, DraftVariant, DraftVariantGroup, DraftVariantOptionRef, ProductDraft } from "~/types/drafts";
 
 
 // --- helpers -----------------------------------------------------------------

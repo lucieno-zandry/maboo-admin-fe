@@ -4,6 +4,7 @@ import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { Package, ExternalLink, Truck } from "lucide-react";
 import { Link } from "react-router";
+import type { Order } from "wle-core";
 
 function OrdersView({ orders }: { orders: Order[] }) {
     return (

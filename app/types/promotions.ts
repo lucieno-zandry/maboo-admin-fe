@@ -1,3 +1,4 @@
+import type { Promotion } from "wle-core";
 
 export type PromotionsQueryParams = {
   page?: number;

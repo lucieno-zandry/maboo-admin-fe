@@ -1,3 +1,4 @@
+import type { Shipment } from 'wle-core';
 import { create } from 'zustand';
 import { fetchShipments } from '~/api/http-requests';
 import type { FetchShipmentsParams, ShipmentsFilters } from '~/types/shipments';

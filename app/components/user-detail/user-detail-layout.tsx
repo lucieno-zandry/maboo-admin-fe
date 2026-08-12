@@ -7,6 +7,7 @@ import { UserProfileHeader } from "./user-profile-header";
 import { UserActions } from "./user-actions";
 import { useState } from "react";
 import { UserEditDialog } from "./user-edit-dialog";
+import type { User } from "wle-core";
 
 interface UserDetailLayoutProps {
     user: User | null;

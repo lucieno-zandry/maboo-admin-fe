@@ -1,5 +1,6 @@
 import appPathname from "~/lib/app-pathname";
 import type { NotificationFilter, NotificationMeta } from "../types/notification-types";
+import type { AppNotification } from "wle-core";
 
 // ─── Relative time ────────────────────────────────────────────────────────────
 

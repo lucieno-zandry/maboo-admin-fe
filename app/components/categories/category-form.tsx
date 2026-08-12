@@ -6,6 +6,7 @@ import { useCategoryStore } from "~/hooks/use-category-store";
 import useGetFieldErrors from "~/hooks/use-get-field-errors";
 import Button from "../custom-ui/button";
 import type { SubmitEventHandler } from "react";
+import type { Category } from "wle-core";
 
 type CategoryFormProps = {
     initialData?: {

@@ -11,6 +11,7 @@ import {
 } from "~/components/ui/table";
 import TransactionsTableRow from "./transactions-table-row";
 import { useTransactionsListStore } from "~/hooks/use-transactions-list-store";
+import type { Transaction } from "wle-core";
 
 
 // ─── Sort Header ──────────────────────────────────────────────────────────────

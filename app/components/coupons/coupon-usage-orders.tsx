@@ -7,6 +7,7 @@ import { Skeleton } from "~/components/ui/skeleton";
 import { cn } from "~/lib/utils";
 import { format } from "date-fns";
 import { Link, useParams } from "react-router";
+import type { Order } from "wle-core";
 
 export type CouponUsageOrdersProps = {
   orders: Order[] | undefined;

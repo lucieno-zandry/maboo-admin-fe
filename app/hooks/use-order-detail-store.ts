@@ -1,3 +1,4 @@
+import type { Order } from 'wle-core';
 import { create } from 'zustand';
 
 interface OrderDetailStore {

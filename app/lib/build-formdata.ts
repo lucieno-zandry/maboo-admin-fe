@@ -1,3 +1,4 @@
+import type { ProductDraft } from "~/types/drafts";
 import { isDraftImageExisting, isDraftImageNew } from "./draft-images-helpers";
 
 /**

@@ -1,4 +1,5 @@
 // ~/stores/client-codes-store.ts
+import type { ClientCode } from "wle-core";
 import { create } from "zustand";
 import {
     fetchClientCodes,

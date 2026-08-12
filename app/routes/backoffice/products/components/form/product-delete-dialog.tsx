@@ -1,6 +1,7 @@
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "~/components/ui/alert-dialog"
 import useProductDeleteDialogStore from "../../stores/use-product-delete-dialog-store";
 import { useDeleteProduct } from "../../hooks/use-delete-product";
+import type { Product } from "wle-core";
 
 export type ProductDeleteDialogViewProps = {
     productDeleteDialogOpen: boolean;

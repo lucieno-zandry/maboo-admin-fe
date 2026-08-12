@@ -1,3 +1,4 @@
+import type { Order } from "wle-core";
 import type { PaginatedResponse } from "~/api/app-fetch";
 
 export type OrdersResponse = PaginatedResponse<Order> 

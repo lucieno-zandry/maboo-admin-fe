@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 import { Badge } from "~/components/ui/badge";
 import { CheckCircle2, Clock, Mail, Calendar, Ban } from "lucide-react";
 import { getCurrentUserStatus, isUserApproved } from "~/lib/user-status";
+import type { User } from "wle-core";
 
 interface UserProfileHeaderProps {
     user: User;

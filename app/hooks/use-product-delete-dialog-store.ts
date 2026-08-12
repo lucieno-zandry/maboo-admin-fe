@@ -1,3 +1,4 @@
+import type { Product } from "wle-core";
 import { create } from "zustand";
 
 type ProductDeleteDialogStore = {

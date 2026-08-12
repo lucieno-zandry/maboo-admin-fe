@@ -30,6 +30,7 @@ import {
 } from "~/components/ui/tooltip";
 import { cn } from "~/lib/utils";
 import type { CreatePromotionData } from "~/types/promotions";
+import type { Promotion } from "wle-core";
 
 // ── Props ─────────────────────────────────────────────────────────────────────
 

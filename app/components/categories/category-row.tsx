@@ -2,6 +2,7 @@
 import { ChevronDown, ChevronRight, MoreVertical } from "lucide-react";
 import HighlightedText from "../highlighted-text";
 import { CategoryActions } from "./category-actions";
+import type { Category } from "wle-core";
 
 type CategoryRowProps = {
     category: Category,

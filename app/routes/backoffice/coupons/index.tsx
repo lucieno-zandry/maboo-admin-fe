@@ -10,6 +10,7 @@ import {
 import { toast } from "sonner";
 import { useCouponsStore } from "~/hooks/use-coupon-store";
 import useDebounce from "~/hooks/use-debounce";
+import type { Coupon } from "wle-core";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Smart component

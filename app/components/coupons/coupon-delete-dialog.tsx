@@ -1,5 +1,6 @@
 // ~/components/coupons/coupon-delete-dialog.tsx
 import { Trash2, Loader2 } from "lucide-react";
+import type { Coupon } from "wle-core";
 import {
   AlertDialog,
   AlertDialogAction,

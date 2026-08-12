@@ -1,3 +1,4 @@
+import type { Transaction } from "wle-core";
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 import type { TransactionsQueryParams, TransactionsResponse } from "~/types/transactions";

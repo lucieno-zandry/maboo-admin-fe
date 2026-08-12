@@ -12,6 +12,7 @@ import { Textarea } from "~/components/ui/textarea";
 import { cn } from "~/lib/utils";
 import type { ProductEditorController } from "./product-editor.controller";
 import { useStep1Basics } from "./step-1-basics.controller";
+import type { ProductDraft } from "~/types/drafts";
 
 type Step1BasicsProps = {
     draft: ProductDraft;

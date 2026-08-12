@@ -1,3 +1,4 @@
+import type { LandingBlock } from 'wle-core';
 import { create } from 'zustand';
 
 type LandingBlocksState = {

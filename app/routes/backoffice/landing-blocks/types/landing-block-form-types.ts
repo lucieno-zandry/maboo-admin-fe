@@ -1,3 +1,5 @@
+import type { CollectionContentItem, LandingBlock } from "wle-core";
+
 export type LandingBlockFormMode = 'create' | 'edit';
 
 export type LandingBlockFormStep = 'type' | 'content' | 'relation';

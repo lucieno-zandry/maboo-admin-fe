@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useProductFormStore } from "../../stores/use-product-form-store";
 import { slugify } from "../../helpers/slugify";
 import { ProductMetaFields } from "./product-meta-fields";
+import type { Category } from "wle-core";
 
 type Props = {
     categories: Category[];

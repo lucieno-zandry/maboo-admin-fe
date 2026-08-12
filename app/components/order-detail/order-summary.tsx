@@ -7,6 +7,7 @@ import { Button } from "../ui/button";
 import { Link } from "react-router";
 import { ExternalLink } from "lucide-react";
 import { formatFullAddress } from "~/lib/format-full-address";
+import type { Address, Order } from "wle-core";
 
 export type OrderSummaryViewProps = {
     user: { name: string; email: string; avatarUrl?: string; id: number } | null;

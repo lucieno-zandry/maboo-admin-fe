@@ -11,6 +11,7 @@ import {
 import { toast } from "sonner";
 import { resendTransactionNotification } from "~/api/http-requests";
 import useRouterStore from "~/hooks/use-router-store";
+import type { Transaction } from "wle-core";
 
 // ─── View ─────────────────────────────────────────────────────────────────────
 

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { getProduct } from '~/api/http-requests';
 import useProductStore from '../stores/use-product-store';
+import type { Product } from 'wle-core';
 
 interface UseProductReturn {
     data: Product | undefined;

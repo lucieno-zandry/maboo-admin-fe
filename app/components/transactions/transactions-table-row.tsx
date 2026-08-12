@@ -9,6 +9,7 @@ import { DisputeStatusBadge } from "./dispute-status-badge";
 import { formatDate } from "~/lib/format-date";
 import TransactionRowActions from "./transaction-row-actions";
 import { useTransactionsListStore } from "~/hooks/use-transactions-list-store";
+import type { Transaction } from "wle-core";
 // ─── View ─────────────────────────────────────────────────────────────────────
 
 export type TransactionsTableRowViewProps = {

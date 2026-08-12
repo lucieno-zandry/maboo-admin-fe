@@ -1,3 +1,4 @@
+import type { PaymentWebhookLog, Transaction, TransactionAuditLog } from "wle-core";
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 import type { AuditLogsResponse, WebhookLogsResponse } from "~/types/transactions";

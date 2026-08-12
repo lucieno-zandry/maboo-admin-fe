@@ -4,6 +4,7 @@ import { Label } from "~/components/ui/label";
 import { Textarea } from "~/components/ui/textarea";
 import { Switch } from "~/components/ui/switch";
 import { Plus, Trash2, GripVertical, Star } from "lucide-react";
+import type { Testimonial } from "wle-core";
 
 interface Props {
     value: Record<string, any>;

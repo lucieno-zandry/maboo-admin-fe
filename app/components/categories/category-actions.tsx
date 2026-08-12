@@ -1,5 +1,6 @@
 // ~/routes/backoffice/categories/components/category-actions.tsx
 import { MoreVertical, Pencil, Plus, Trash2 } from "lucide-react";
+import type { Category } from "wle-core";
 import {
     DropdownMenu,
     DropdownMenuContent,

@@ -10,6 +10,7 @@ import { cn } from "~/lib/utils";
 import { Badge } from "../ui/badge";
 import { useVariantsTable } from "./variants-table.controller";
 import formatPrice from "~/lib/format-price";
+import type { Variant, VariantGroup } from "wle-core";
 
 type VariantsTableProps = {
   variants: Variant[];

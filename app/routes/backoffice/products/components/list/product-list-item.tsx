@@ -3,6 +3,7 @@ import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { cn } from "~/lib/utils";
 import formatPrice from "~/lib/format-price";
+import type { Product } from "wle-core";
 
 const stockBadgeVariant = {
     in_stock: "default",

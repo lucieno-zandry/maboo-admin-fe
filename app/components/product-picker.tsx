@@ -5,6 +5,7 @@ import { X, Search } from "lucide-react";
 import { useEffect, useState } from "react";
 import useDebounce from "~/hooks/use-debounce";
 import { getProducts } from "~/api/http-requests";
+import type { Product } from "wle-core";
 
 interface Props {
     value: number[]; // product IDs

@@ -7,6 +7,7 @@ import { ProductVariantsTable } from './components/detail/product-variants-table
 import { ProductVariantGroups } from './components/detail/product-variants-groups';
 import { ProductImagesGallery } from './components/detail/product-images-gallery';
 import { ProductDetailSkeleton } from './components/detail/product-detail-skeleton';
+import type { Product } from 'wle-core';
 
 // Dumb Component
 interface ProductDetailViewProps {

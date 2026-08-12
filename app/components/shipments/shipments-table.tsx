@@ -16,6 +16,7 @@ import { StatusBadge } from '../custom-ui/status-badge';
 import { useShipmentsStore } from '~/hooks/use-shipments-store';
 import { useNavigate } from 'react-router';
 import useRouterStore from '~/hooks/use-router-store';
+import type { Shipment } from 'wle-core';
 
 // --- DUMB COMPONENT (View) ---
 type ShipmentsTableViewProps = {

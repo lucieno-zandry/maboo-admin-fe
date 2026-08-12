@@ -13,6 +13,7 @@ import {
     DropdownMenuItem,
 } from "~/components/ui/dropdown-menu"; // adjust path to your shadcn dropdown export
 import { Ellipsis } from "lucide-react";
+import type { Transaction } from "wle-core";
 
 // ===== VIEW =====
 export type OrderPaymentsViewProps = {

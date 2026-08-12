@@ -8,6 +8,7 @@ import TransactionMethodBadge from "../transactions/transaction-method-badge";
 import { formatDate } from "~/lib/format-date";
 import { useTransactionDetailStore } from "~/hooks/use-transaction-detail-store";
 import { toast } from "sonner";
+import type { Transaction } from "wle-core";
 
 export type TransactionInfoCardViewProps = {
     transaction: Transaction;

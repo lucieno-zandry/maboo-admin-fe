@@ -1,5 +1,6 @@
 // ── Constants ─────────────────────────────────────────────────────────────────
 
+import type { ShippingMethod } from "wle-core";
 import formatPrice from "./format-price";
 
 export const CARRIER_LABELS: Record<ShippingMethod['carrier'], string> = {

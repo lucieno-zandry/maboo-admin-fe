@@ -1,3 +1,5 @@
+import type { User, UserStatus } from "wle-core";
+
 export function getCurrentUserStatus(user: User): UserStatus | null {
     return user.status ?? null; // API should compute the latest status
 }

@@ -5,6 +5,7 @@ import { Badge } from "~/components/ui/badge";
 import { Skeleton } from "~/components/ui/skeleton";
 import { formatDate } from "~/lib/format-date";
 import { useTransactionDetailStore } from "~/hooks/use-transaction-detail-store";
+import type { PaymentWebhookLog } from "wle-core";
 
 const WEBHOOK_STATUS_COLORS: Record<string, string> = {
     RECEIVED: "bg-blue-500/15 text-blue-400 border-blue-500/30",

@@ -1,3 +1,5 @@
+import type { LandingBlock } from "wle-core";
+
 export type StoreLandingBlockPayload = {
     block_type: LandingBlock['block_type'];
     title?: string | null;

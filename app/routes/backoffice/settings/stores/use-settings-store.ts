@@ -1,3 +1,4 @@
+import type { Setting } from 'wle-core';
 import { create } from 'zustand';
 import { getSettings, updateSetting } from '~/api/http-requests';
 

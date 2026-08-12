@@ -40,6 +40,7 @@ import {
 import { CouponStatCard } from "./coupon-stat-card";
 import { CouponUsageOrders } from "./coupon-usage-orders";
 import { getCouponStatus } from "./coupon-list-item";
+import type { Coupon } from "wle-core";
 
 // ── Code Copy Badge ───────────────────────────────────────────────────────────
 

@@ -17,6 +17,7 @@ import {
     DialogFooter
 } from "../ui/dialog";
 import { ValidationException } from "~/api/app-fetch";
+import type { User } from "wle-core";
 
 const dataFormat = {
     name: z.string().min(1, "Name is required"),

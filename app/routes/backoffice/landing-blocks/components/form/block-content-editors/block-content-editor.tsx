@@ -1,3 +1,4 @@
+import type { LandingBlock } from "wle-core";
 import { CollectionGridContentEditor } from "./collection-grid-content-editor";
 import { ComparisonContentEditor } from "./comparison-content-editor";
 import { CtaBannerContentEditor } from "./cta-banner-content-editor";

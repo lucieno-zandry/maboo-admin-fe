@@ -17,6 +17,7 @@ import { RelationFields } from './relation-fields';
 import { FormErrorBanner } from './form-error-banner';
 import { useLandingBlockFormStore } from '../../stores/use-landing-block-form-store';
 import { useSaveLandingBlock } from '../../hooks/use-save-landing-block';
+import type { LandingBlock } from 'wle-core';
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 

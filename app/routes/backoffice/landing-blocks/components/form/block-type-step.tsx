@@ -5,6 +5,7 @@ import {
     BLOCK_TYPE_ICONS,
 } from '../../helpers/data';
 import { useLandingBlockFormStore } from '../../stores/use-landing-block-form-store';
+import type { LandingBlock } from 'wle-core';
 
 const BLOCK_TYPES = Object.keys(BLOCK_TYPE_LABELS) as LandingBlock['block_type'][];
 

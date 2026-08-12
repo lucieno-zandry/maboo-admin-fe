@@ -1,5 +1,6 @@
 // ~/stores/use-category-store.ts
 import { toast } from 'sonner';
+import type { Category } from 'wle-core';
 import { create } from 'zustand';
 import { getCategories } from '~/api/http-requests';
 

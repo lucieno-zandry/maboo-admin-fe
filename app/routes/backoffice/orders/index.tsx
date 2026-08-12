@@ -10,6 +10,7 @@ import OrdersFilterDialog, { DEFAULT_MAX_TOTAL } from "~/components/orders/order
 import OrdersBulkActions from "~/components/orders/orders-bulk-actions";
 import toOrderQueryParams from "~/lib/to-order-query-params";
 import UpdateShipmentDialog from "~/components/orders/update-shipment-sheet";
+import type { Order } from "wle-core";
 
 export default function () {
     const [searchParams, setSearchParams] = useSearchParams();

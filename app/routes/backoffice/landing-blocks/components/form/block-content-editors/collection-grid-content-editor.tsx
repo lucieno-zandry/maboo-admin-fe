@@ -8,6 +8,7 @@ import { useCategoryStore } from "~/hooks/use-category-store";
 import { storeImage, deleteImage } from "~/api/http-requests";
 import { toast } from "sonner";
 import type { CollectionItem } from "../../../types/landing-block-form-types";
+import type { CollectionContentItem } from "wle-core";
 
 interface Props {
     value: Record<string, any>;

@@ -1,3 +1,4 @@
+import type { Order } from 'wle-core';
 import { create } from 'zustand';
 import { fetchOrders } from '~/api/http-requests';
 import type { OrdersQueryParams } from '~/types/orders';

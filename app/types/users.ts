@@ -1,5 +1,7 @@
 // types/users.ts
 
+import type { User, UserStatus } from "wle-core";
+
 export type FetchUsersParams = {
     page?: number;
     per_page?: number;

@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import type { LandingBlockFormData } from '../types/landing-block-form-types';
+import type { LandingBlock } from 'wle-core';
 
 type LandingBlockFormState = {
     isOpen: boolean;

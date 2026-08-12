@@ -7,6 +7,7 @@ import { Input } from "../ui/input";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
 import { Button } from "../ui/button";
 import { Switch } from "../ui/switch";
+import type { ClientCode } from "wle-core";
 
 export type CodeFormDialogProps = {
     open: boolean;

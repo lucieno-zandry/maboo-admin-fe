@@ -9,6 +9,7 @@ import {
 import { Plus, Trash2, X, Info, Layers } from "lucide-react";
 import { cn } from "~/lib/utils";
 import type { ProductEditorController } from "./product-editor.controller";
+import type { ProductDraft } from "~/types/drafts";
 
 type Step2GroupsProps = {
     draft: ProductDraft;

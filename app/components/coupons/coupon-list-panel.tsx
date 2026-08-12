@@ -29,6 +29,7 @@ import {
 import { cn } from "~/lib/utils";
 import { CouponListItem } from "./coupon-list-item";
 import { CouponBulkBar } from "./coupon-bulk-bar";
+import type { Coupon } from "wle-core";
 
 export type CouponListPanelProps = {
   coupons: Coupon[];

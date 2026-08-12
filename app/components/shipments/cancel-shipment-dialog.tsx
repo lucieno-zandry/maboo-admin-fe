@@ -13,6 +13,7 @@ import { useShipmentsStore } from '~/hooks/use-shipments-store';
 import { useState } from 'react';
 import { deleteShipment } from '~/api/http-requests';
 import { toast } from 'sonner';
+import type { Shipment } from 'wle-core';
 
 // --- DUMB COMPONENT (View) ---
 type CancelShipmentDialogViewProps = {

@@ -27,6 +27,7 @@ import {
 } from "~/components/ui/tooltip";
 import { Separator } from "~/components/ui/separator";
 import { Loader2, Shuffle, Hash } from "lucide-react";
+import type { Coupon } from "wle-core";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 

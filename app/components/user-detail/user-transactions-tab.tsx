@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { CreditCard, Receipt, ArrowUpRight } from "lucide-react";
+import type { Transaction } from "wle-core";
 
 function TransactionsView({ transactions }: { transactions: Transaction[] }) {
     const getStatusVariant = (status: string) => {

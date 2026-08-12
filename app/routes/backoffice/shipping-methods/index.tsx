@@ -52,6 +52,7 @@ import {
     Map,
 } from 'lucide-react';
 import formatPrice from '~/lib/format-price';
+import type { ShippingMethod, ShippingRate } from 'wle-core';
 
 // ── Carrier badge helper ──────────────────────────────────────────────────────
 

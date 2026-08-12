@@ -3,6 +3,7 @@ import { cn } from "~/lib/utils";
 import { Badge } from "../ui/badge";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { Button } from "../ui/button";
+import type { ClientCode } from "wle-core";
 
 export type CodeListItemProps = {
     code: ClientCode;

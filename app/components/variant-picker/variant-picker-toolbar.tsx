@@ -10,6 +10,7 @@ import {
 } from "~/components/ui/select";
 import { Button } from "~/components/ui/button";
 import type { ProductQueryParams } from "~/lib/serialize-product-params";
+import type { Category } from "wle-core";
 
 export type VariantPickerToolbarProps = {
     search: string;

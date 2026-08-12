@@ -1,3 +1,5 @@
+import type { LandingBlock } from "wle-core";
+
 export const BLOCK_TYPE_LABELS: Record<LandingBlock['block_type'], string> = {
     hero: 'Hero',
     collection_grid: 'Collection Grid',
