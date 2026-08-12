@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { useNavigate } from "react-router";
+import type { Product } from "wle-core";
 import useRouterStore from "~/hooks/use-router-store";
 import useSelectedProductStore from "~/hooks/use-selected-product-store";
 

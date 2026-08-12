@@ -1,3 +1,5 @@
+import type { Shipment } from "wle-core";
+
 export type ShipmentsFilters = {
   status?: Shipment['status'] | 'all';
   search?: string;               // search by order uuid, tracking number, etc.

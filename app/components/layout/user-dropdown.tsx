@@ -18,6 +18,7 @@ import { useTranslation } from 'react-i18next';
 import appPathname from '~/lib/app-pathname';
 import { LanguageSwitcher } from './language-switcher';
 import { ThemeSelector } from './theme-selector';
+import type { User } from 'wle-core';
 
 type UserDropdownProps = {
     user: User;

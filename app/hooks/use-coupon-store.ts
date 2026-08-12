@@ -1,4 +1,5 @@
 // ~/stores/coupons-store.ts
+import type { Coupon } from "wle-core";
 import { create } from "zustand";
 import {
     fetchCoupons,

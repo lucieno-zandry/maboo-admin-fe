@@ -9,6 +9,7 @@ import {
 import sortNodes from "~/lib/sort-nodes";
 import nodeMatchesSearch from "~/lib/node-matches-search";
 import filterTree from "~/lib/filter-tree";
+import type { Category } from "wle-core";
 
 type CategoryTreeProps = {
     onEdit: (category: Category) => void;

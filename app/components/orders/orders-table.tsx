@@ -24,6 +24,7 @@ import { Checkbox } from "../ui/checkbox";
 import useRouterStore from "~/hooks/use-router-store";
 import { getLatestPayment, getPaymentStatus } from "~/lib/get-order-payment-informations";
 import { getShipmentStatus } from "~/lib/get-order-shipment-informations";
+import type { Order, Transaction } from "wle-core";
 
 
 const statusBadge = (status: string) => {

@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import type { Product } from "wle-core";
 
 export type ProductListItemProps = {
     product: Product;

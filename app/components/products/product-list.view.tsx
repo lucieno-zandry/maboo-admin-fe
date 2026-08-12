@@ -28,6 +28,7 @@ import {
 import { SORT_OPTIONS, useProductList } from "./product-list.controller";
 import { ProductListItem } from "./product-list-item.view";
 import getCurrency from "~/lib/get-currency";
+import type { Product } from "wle-core";
 
 type ProductListProps = {
   selectedId: number | null;

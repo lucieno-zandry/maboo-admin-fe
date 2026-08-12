@@ -2,6 +2,7 @@
 import { Badge } from "~/components/ui/badge";
 import { Users, UserCheck, User } from "lucide-react";
 import { cn } from "~/lib/utils";
+import type { Promotion } from "wle-core";
 
 export type PromotionTargetingBadgeProps = {
   appliesTo: Promotion["applies_to"];

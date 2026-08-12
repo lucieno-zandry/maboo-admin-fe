@@ -3,6 +3,7 @@ import { useCategoryStore } from '~/hooks/use-category-store';
 import { getProducts } from '~/api/http-requests';
 import useDebounce from '~/hooks/use-debounce';
 import { useProductListStore } from '~/hooks/use-product-list-store';
+import type { Product } from 'wle-core';
 
 const PAGE_SIZE = 10;
 

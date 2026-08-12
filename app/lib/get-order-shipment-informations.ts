@@ -1,3 +1,5 @@
+import type { Order, Shipment } from "wle-core";
+
 export const getLatestShipment = (order: Order): Shipment | null => {
     if (!order.shipments || order.shipments.length === 0) return null;
 

@@ -1,4 +1,4 @@
-import { Calendar, CheckCircle2, Shield, User } from "lucide-react";
+import { Calendar, CheckCircle2, Shield, User as UserIcon } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { TabsContent } from "../ui/tabs";
 import { Separator } from "../ui/separator";
@@ -7,6 +7,7 @@ import { formatDate } from "~/lib/format-date";
 import { useAuthStore } from "~/hooks/use-auth-store";
 import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
+import type { User } from "wle-core";
 
 export type AccountDetailsTabProps = {
     user: User,
@@ -24,7 +25,7 @@ export function AccountDetailsTab({ user, t }: AccountDetailsTabProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-1">
                         <div className="flex items-center gap-2 text-sm text-gray-500">
-                            <User className="h-4 w-4" />
+                            <UserIcon className="h-4 w-4" />
                             {t('settings:userId')}
                         </div>
                         <p className="font-medium">{user.id}</p>

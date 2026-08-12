@@ -1,3 +1,6 @@
+import type { Product } from "wle-core";
+import type { DraftVariant, DraftVariantOptionRef, ProductDraft } from "~/types/drafts";
+
 /**
  * Maps a Product from the API into the ProductDraft shape used by the editor.
  *

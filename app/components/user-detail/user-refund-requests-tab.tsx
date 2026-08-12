@@ -10,6 +10,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
+import type { RefundRequest } from "wle-core";
 
 function RefundRequestsView({ requests }: { requests: RefundRequest[] }) {
     const getStatusVariant = (status: string) => {

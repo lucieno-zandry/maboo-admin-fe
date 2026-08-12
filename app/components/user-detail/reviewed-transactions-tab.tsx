@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { ClipboardCheck, Eye } from "lucide-react";
+import type { Transaction } from "wle-core";
 
 function ReviewedTransactionsView({ transactions }: { transactions: Transaction[] }) {
     return (

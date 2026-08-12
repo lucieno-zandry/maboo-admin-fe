@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useCategoryStore } from "~/hooks/use-category-store";
 import { isDraftImageExisting, isDraftImageNew } from "~/lib/draft-images-helpers";
+import type { DraftImage } from "~/types/drafts";
 
 export type ImagePreview = {
     url: string;

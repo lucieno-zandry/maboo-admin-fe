@@ -1,3 +1,4 @@
+import type { AppNotification } from "wle-core";
 import { create } from "zustand";
 
 type NotificationsStore = {

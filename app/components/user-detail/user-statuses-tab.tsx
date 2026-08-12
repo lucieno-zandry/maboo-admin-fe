@@ -4,6 +4,7 @@ import { Badge } from "~/components/ui/badge";
 import { AlertCircle, Clock, Calendar, FileText, UserCog, ExternalLink } from "lucide-react";
 import { Link } from "react-router";
 import { formatDate } from "~/lib/format-date";
+import type { UserStatus } from "wle-core";
 
 // Dumb view
 function StatusesView({ statuses }: { statuses: UserStatus[] }) {

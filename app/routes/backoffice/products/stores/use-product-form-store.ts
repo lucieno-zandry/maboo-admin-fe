@@ -9,6 +9,7 @@ import type {
     FormVariantOption,
     ProductFormStep,
 } from "../types/product-form-types";
+import type { Product } from "wle-core";
 
 // ─── State shape ──────────────────────────────────────────────────────────────
 

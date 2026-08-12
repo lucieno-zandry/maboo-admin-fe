@@ -11,6 +11,7 @@ import {
 import { toast } from "sonner";
 import type { CreatePromotionData, PromotionsQueryParams } from "~/types/promotions";
 import useDebounce from "~/hooks/use-debounce";
+import type { Promotion } from "wle-core";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Smart component — owns all side effects, zero UI logic

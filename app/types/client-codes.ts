@@ -1,3 +1,5 @@
+import type { ClientCode } from "wle-core";
+
 export type ClientCodesQueryParams = {
     page?: number;
     per_page?: number;

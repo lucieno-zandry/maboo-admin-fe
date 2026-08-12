@@ -1,4 +1,5 @@
 // hooks/use-users-store.ts
+import type { User } from "wle-core";
 import { create } from "zustand";
 import { fetchUsers } from "~/api/http-requests";
 import type { FetchUsersParams } from "~/types/users";

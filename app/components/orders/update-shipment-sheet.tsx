@@ -14,6 +14,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { Input } from "../ui/input";
 import { StatusBadge } from "../custom-ui/status-badge";
 import { getLatestShipment } from "~/lib/get-order-shipment-informations";
+import type { Order, Shipment } from "wle-core";
 
 type UpdateShipmentSheetViewProps = {
     open: boolean;

@@ -9,6 +9,7 @@ import { VariantGroupsStep } from "./variant-groups-step";
 import { VariantsStep } from "./variants-step";
 import { ProductFormDrawerView } from "./product-form-drawer-view";
 import { useCategoryStore } from "~/hooks/use-category-store";
+import type { Product } from "wle-core";
 
 
 /**

@@ -1,5 +1,6 @@
 import { useState, type Dispatch, type SetStateAction } from "react";
 import { type ActionFunctionArgs } from "react-router";
+import type { Category } from "wle-core";
 import { createCategory, deleteCategory, updateCategory } from "~/api/http-requests";
 import { CategoryDeleteDialog } from "~/components/categories/category-delete-dialog";
 import { CategoryPageHeader } from "~/components/categories/category-page-header";

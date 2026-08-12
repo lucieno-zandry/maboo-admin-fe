@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import type { Category } from 'wle-core';
 import { getCategories } from '~/api/http-requests';
 import { useCategoryStore } from '~/hooks/use-category-store';
 

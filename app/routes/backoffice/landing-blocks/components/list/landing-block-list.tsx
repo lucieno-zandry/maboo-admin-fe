@@ -20,6 +20,7 @@ import { Alert, AlertDescription } from '~/components/ui/alert';
 import { LandingBlockListItem } from './landing-block-list-item';
 import { useLandingBlocksStore } from '../../stores/use-landing-blocks-store';
 import { useReorderLandingBlocks } from '../../hooks/use-reorder-landing-blocks';
+import type { LandingBlock } from 'wle-core';
 
 // ── Dumb View ─────────────────────────────────────────────────────────────────
 

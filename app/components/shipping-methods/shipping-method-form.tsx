@@ -26,6 +26,7 @@ import {
 import { Badge } from '~/components/ui/badge';
 import { X, Plus, Loader2 } from 'lucide-react';
 import getCurrency from '~/lib/get-currency';
+import type { ShippingMethod } from 'wle-core';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 

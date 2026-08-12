@@ -10,6 +10,7 @@ import { StatusBadge } from '~/components/custom-ui/status-badge';
 import { useRevalidator } from 'react-router';
 import ApproveRefundDialog from '../refunds/refund-action-dialog';
 import RejectRefundDialog from '../refunds/reject-refund-dialog';
+import type { RefundRequest } from 'wle-core';
 
 // ===== VIEW =====
 export type OrderRefundRequestsViewProps = {

@@ -1,5 +1,5 @@
 {
-  "name": "alofo-backoffice-fe",
+  "name": "wle-backoffice-fe",
   "private": true,
   "type": "module",
   "scripts": {
@@ -16,7 +16,7 @@
     "@dnd-kit/utilities": "^3.2.2",
     "@hookform/resolvers": "^5.2.2",
     "@react-router/node": "7.12.0",
-    "@react-router/serve": "7.12.0",
+    "@react-router/serve": "^7.18.2",
     "@tanstack/react-query": "^5.96.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -38,11 +38,12 @@
     "recharts": "^3.8.1",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.4.0",
+    "wle-core": "github:lucieno-zandry/wle-core-package",
     "zod": "^4.3.6",
     "zustand": "^5.0.12"
   },
   "devDependencies": {
-    "@react-router/dev": "7.12.0",
+    "@react-router/dev": "^7.18.2",
     "@tailwindcss/vite": "^4.1.13",
     "@types/node": "^22",
     "@types/react": "^19.2.7",

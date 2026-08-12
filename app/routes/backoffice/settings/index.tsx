@@ -5,6 +5,7 @@ import { Skeleton } from "~/components/ui/skeleton";
 import { Alert, AlertDescription } from "~/components/ui/alert";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "~/components/ui/card";
 import { SettingsForm } from "./components/form/settings-form";
+import type { Setting } from "wle-core";
 
 export default function SettingsPage() {
     const { settings, isLoading, error, fetchSettings, updateSetting } = useSettingsStore();

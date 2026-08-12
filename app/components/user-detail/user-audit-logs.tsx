@@ -1,6 +1,7 @@
 import { useUserDetailStore } from "~/hooks/use-user-detail-store";
 import { Card, CardHeader, CardTitle } from "~/components/ui/card";
 import { Activity, ArrowRight } from "lucide-react";
+import type { TransactionAuditLog } from "wle-core";
 
 function AuditLogsView({ logs }: { logs: TransactionAuditLog[] }) {
     return (

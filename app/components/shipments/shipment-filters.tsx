@@ -10,6 +10,7 @@ import { cn } from '~/lib/utils';
 import { useState } from 'react';
 import type { ShipmentsFilters as FiltersType } from '~/types/shipments';
 import { useShipmentsStore } from '~/hooks/use-shipments-store';
+import type { Shipment } from 'wle-core';
 
 // --- DUMB COMPONENT (View) ---
 type ShipmentsFiltersViewProps = {

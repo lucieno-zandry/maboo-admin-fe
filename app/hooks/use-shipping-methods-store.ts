@@ -1,4 +1,5 @@
 import { toast } from 'sonner';
+import type { ShippingMethod, ShippingRate } from 'wle-core';
 import { create } from 'zustand';
 import { HttpException, ValidationException } from '~/api/app-fetch';
 import {

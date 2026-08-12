@@ -1,3 +1,5 @@
+import type { Order, Transaction } from "wle-core";
+
 export const getLatestPayment = (order: Order): Transaction | null => {
     if (!order.transactions || order.transactions.length === 0) return null;
 

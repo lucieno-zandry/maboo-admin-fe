@@ -3,6 +3,7 @@ import { ChevronRight, Package, ImageOff } from "lucide-react";
 import { Badge } from "~/components/ui/badge";
 import { cn } from "~/lib/utils";
 import { VariantPickerVariantRow } from "./variant-picker-variant-row";
+import type { Product } from "wle-core";
 
 // ── Product-level checkbox (none / partial / all) ─────────────────────────────
 

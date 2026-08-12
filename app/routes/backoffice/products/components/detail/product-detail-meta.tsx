@@ -1,3 +1,4 @@
+import type { Product } from 'wle-core';
 import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card';
 
 export const ProductDetailMeta = ({ product }: { product: Product }) => (

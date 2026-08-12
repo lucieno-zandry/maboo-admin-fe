@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { LinkIcon } from "lucide-react";
 import { useTransactionDetailStore } from "~/hooks/use-transaction-detail-store";
+import type { User } from "wle-core";
 
 export type TransactionUserCardViewProps = {
     user: User;

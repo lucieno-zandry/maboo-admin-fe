@@ -3,6 +3,7 @@
 // ============================================
 import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card';
 import { Image as ImageIcon } from 'lucide-react';
+import type { AppImage } from 'wle-core';
 
 interface ProductImagesGalleryProps {
     images: AppImage[];

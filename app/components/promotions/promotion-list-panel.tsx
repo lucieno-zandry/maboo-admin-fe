@@ -31,6 +31,7 @@ import { cn } from "~/lib/utils";
 import { PromotionListItem } from "./promotion-list-item";
 import { PromotionBulkBar } from "./promotion-bulk-bar";
 import type { PromotionsQueryParams } from "~/types/promotions";
+import type { Promotion } from "wle-core";
 
 export type PromotionListPanelProps = {
     promotions: Promotion[];

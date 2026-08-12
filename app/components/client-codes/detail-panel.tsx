@@ -11,6 +11,7 @@ import { cn } from "~/lib/utils";
 import { StatCard } from "./start-card";
 import { UserRow } from "./user-row";
 import ClientCodeDetailSekeleton from "./client-code-detail-sekeleton";
+import type { ClientCode } from "wle-core";
 
 export type DetailPanelProps = {
     code: ClientCode | null;

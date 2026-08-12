@@ -1,5 +1,6 @@
 // ~/components/variant-picker/variant-picker-variant-row.tsx
 import { Package } from "lucide-react";
+import type { Variant } from "wle-core";
 import { cn } from "~/lib/utils";
 
 export type VariantPickerVariantRowProps = {

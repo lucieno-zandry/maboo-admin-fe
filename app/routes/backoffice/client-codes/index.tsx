@@ -20,6 +20,7 @@ import useDebounce from "~/hooks/use-debounce";
 import { CodeListPanel } from "~/components/client-codes/code-list-panel";
 import { DetailPanel } from "~/components/client-codes/detail-panel";
 import { CodeFormDialog } from "~/components/client-codes/code-form-dialog";
+import type { ClientCode } from "wle-core";
 
 export default function ClientCodesPage() {
     const {

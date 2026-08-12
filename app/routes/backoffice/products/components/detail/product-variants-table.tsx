@@ -13,6 +13,7 @@ import { Badge } from '~/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card';
 import { getStockStatus, getPromotionBadge } from '../../helpers/product-helpers';
 import formatPrice from '~/lib/format-price';
+import type { Variant } from 'wle-core';
 
 interface ProductVariantsTableProps {
     variants: Variant[];

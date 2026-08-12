@@ -1,3 +1,5 @@
+import type { Coupon } from "wle-core";
+
 export type CouponsQueryParams = {
   page?: number;
   per_page?: number;

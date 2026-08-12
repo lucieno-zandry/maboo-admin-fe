@@ -40,6 +40,7 @@ import { PromotionValidityTimeline } from "./promotion-validity-timeline";
 import { PromotionTargetingBadge } from "./promotion-targeting-badge";
 import { PromotionAffectedVariants } from "./promotion-affected-variants";
 import { getPromotionStatus } from "./promotion-list-item";
+import type { Promotion } from "wle-core";
 
 // ── Stacking config card ──────────────────────────────────────────────────────
 

@@ -1,6 +1,7 @@
 import { Badge } from "~/components/ui/badge";
 import { format } from "date-fns";
 import { useOrderDetailStore } from "~/hooks/use-order-detail-store";
+import type { Shipment } from "wle-core";
 
 export type OrderShipmentsViewProps = {
     shipments: Shipment[];

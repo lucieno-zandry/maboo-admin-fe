@@ -1,6 +1,7 @@
 import { useSearchParams } from 'react-router';
 import { useEffect, useRef } from 'react';
 import { useShipmentsStore } from './use-shipments-store';
+import type { Shipment } from 'wle-core';
 
 export function useShipmentsUrlSync() {
     const [searchParams, setSearchParams] = useSearchParams();

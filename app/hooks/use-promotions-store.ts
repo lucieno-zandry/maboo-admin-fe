@@ -1,4 +1,5 @@
 // ~/stores/promotions-store.ts
+import type { Promotion } from "wle-core";
 import { create } from "zustand";
 import {
     fetchPromotions,

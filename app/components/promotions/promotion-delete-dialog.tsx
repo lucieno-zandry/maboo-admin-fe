@@ -1,5 +1,6 @@
 // ~/components/promotions/promotion-delete-dialog.tsx
 import { Trash2, Loader2 } from "lucide-react";
+import type { Promotion } from "wle-core";
 import {
   AlertDialog,
   AlertDialogAction,

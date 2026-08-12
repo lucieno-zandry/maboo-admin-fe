@@ -1,4 +1,5 @@
 // ~/hooks/use-variant-picker-store.ts
+import type { Product } from "wle-core";
 import { create } from "zustand";
 import { getProducts } from "~/api/http-requests";
 import type { ProductQueryParams } from "~/lib/serialize-product-params";

@@ -10,6 +10,7 @@ import { filterNotifications } from "../helpers/notification-helpers";
 import type { NotificationFilter } from "../types/notification-types";
 import { loadNotifications } from "../actions/notification-actions";
 import { NotificationsErrorView } from "./notifications-error";
+import type { AppNotification } from "wle-core";
 
 // ─── Date group label ─────────────────────────────────────────────────────────
 

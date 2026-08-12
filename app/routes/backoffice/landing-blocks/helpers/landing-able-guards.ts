@@ -4,6 +4,8 @@
 // These helpers determine which model is actually used in the polymorphic
 // `landing_able` relation, allowing the UI to render contextual info.
 
+import type { AppImage, Category, LandingAble, Product, Variant } from "wle-core";
+
 export function isProduct(able: LandingAble): able is Product {
     if (!able) return false;
     return (

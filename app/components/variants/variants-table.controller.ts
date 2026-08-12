@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import type { Variant, VariantGroup } from "wle-core";
 
 export function useVariantsTable(variants: Variant[], variantGroups: VariantGroup[]) {
     // Build a map of group id → group name

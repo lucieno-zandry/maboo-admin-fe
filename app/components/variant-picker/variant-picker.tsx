@@ -6,6 +6,7 @@ import { VariantPickerToolbar } from "./variant-picker-toolbar";
 import { VariantPickerProductRow } from "./variant-picker-product-row";
 import { VariantPickerFooter } from "./variant-picker-footer";
 import type { ProductQueryParams } from "~/lib/serialize-product-params";
+import type { Category, Product } from "wle-core";
 
 // ── Loading skeleton ───────────────────────────────────────────────────────────
 

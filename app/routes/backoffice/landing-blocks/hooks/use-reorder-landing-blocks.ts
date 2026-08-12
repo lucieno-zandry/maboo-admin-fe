@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { reorderLandingBlocks } from '~/api/http-requests';
 import { useLandingBlocksStore } from '../stores/use-landing-blocks-store';
+import type { LandingBlock } from 'wle-core';
 
 export function useReorderLandingBlocks() {
     const [isSaving, setIsSaving] = useState(false);

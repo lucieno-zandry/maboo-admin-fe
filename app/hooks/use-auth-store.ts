@@ -1,4 +1,5 @@
 import { toast } from 'sonner'
+import type { User } from 'wle-core'
 import { create } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'
 import { HttpException } from '~/api/app-fetch'

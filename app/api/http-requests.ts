@@ -18,6 +18,7 @@ import type { StoreShippingMethodData, StoreShippingRateData, UpdateShippingMeth
 import type { VariantQueryParams } from "~/types/products";
 import type { NotificationsQueryParams } from "~/components/notifications/types/notifications-query-params";
 import type { ReorderLandingBlocksPayload, UpdateLandingBlockPayload, } from "~/routes/backoffice/landing-blocks/types/http-request-types";
+import type { AppImage, AppNotification, Category, ClientCode, Coupon, LandingBlock, Order, Product, Promotion, RefundRequest, Setting, Shipment, ShippingMethod, ShippingRate, Transaction, User, UserStatus, Variant, VariantOption } from "wle-core";
 
 // auth
 

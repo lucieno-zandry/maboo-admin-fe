@@ -4,6 +4,7 @@ import { useOrderDetailStore } from "~/hooks/use-order-detail-store";
 import formatPrice from "~/lib/format-price";
 import { ImageOff } from "lucide-react";
 import useRouterStore from "~/hooks/use-router-store";
+import type { CartItem } from "wle-core";
 
 // ===== VIEW =====
 export type OrderItemsTableViewProps = {

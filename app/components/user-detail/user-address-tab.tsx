@@ -10,6 +10,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
+import type { Address } from "wle-core";
 
 interface AddressesViewProps {
     addresses: Address[];

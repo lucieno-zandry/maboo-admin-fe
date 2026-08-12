@@ -4,6 +4,7 @@ import { Badge } from "~/components/ui/badge";
 import { CheckCircle2, Clock, UserIcon } from "lucide-react";
 import { cn } from "~/lib/utils"; // Ensure you have this utility
 import { isUserApproved } from "~/lib/user-status";
+import type { User } from "wle-core";
 
 interface UserCardProps {
     user: User;

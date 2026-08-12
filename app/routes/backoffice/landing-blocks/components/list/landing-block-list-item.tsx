@@ -12,6 +12,7 @@ import { useLandingBlockDeleteDialogStore } from '../../stores/use-landing-block
 import { updateLandingBlock } from '~/api/http-requests';
 import { useLandingBlocksStore } from '../../stores/use-landing-blocks-store';
 import { useState } from 'react';
+import type { LandingBlock } from 'wle-core';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 

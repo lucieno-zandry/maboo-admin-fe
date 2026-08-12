@@ -4,6 +4,7 @@ import { useProductFilterStore } from '../stores/use-product-filter-store';
 import type { PaginatedResponse } from '~/api/app-fetch';
 import useDebounce from '~/hooks/use-debounce';
 import useProductsStore from '../stores/use-products-store';
+import type { Product } from 'wle-core';
 
 interface UseProductsReturn {
     data: PaginatedResponse<Product> | undefined;

@@ -1,3 +1,4 @@
+import type { PaymentWebhookLog, Transaction, TransactionAuditLog } from "wle-core";
 
 // Query params for list endpoint
 export type TransactionsQueryParams = {

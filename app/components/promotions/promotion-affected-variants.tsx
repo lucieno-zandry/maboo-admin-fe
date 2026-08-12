@@ -11,6 +11,7 @@ import {
 } from "~/components/ui/tooltip";
 import { cn } from "~/lib/utils";
 import { Link, useParams } from "react-router";
+import type { Variant } from "wle-core";
 
 export type PromotionAffectedVariantsProps = {
   variants: Variant[] | undefined;

@@ -5,6 +5,7 @@ import { Skeleton } from "../ui/skeleton";
 import { Badge } from "../ui/badge";
 import { formatDate } from "~/lib/format-date";
 import { useTransactionDetailStore } from "~/hooks/use-transaction-detail-store";
+import type { TransactionAuditLog } from "wle-core";
 
 const ACTION_COLORS: Record<string, string> = {
     status_override: "bg-amber-500/15 text-amber-400 border-amber-500/30",

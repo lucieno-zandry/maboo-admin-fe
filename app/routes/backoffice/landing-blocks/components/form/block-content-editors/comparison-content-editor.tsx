@@ -3,6 +3,7 @@ import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { Switch } from "~/components/ui/switch";
 import { Plus, Trash2, GripVertical } from "lucide-react";
+import type { ComparisonRow } from "wle-core";
 
 interface Props {
     value: Record<string, any>;
