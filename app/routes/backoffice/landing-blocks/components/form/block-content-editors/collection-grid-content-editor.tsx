@@ -102,6 +102,9 @@ export function CollectionGridContentEditor({ value, onChange }: Props) {
                 if (error instanceof HttpException) {
                     if (error.status === 404)
                         return updateItem(index, { image_id: null, image: undefined })
+
+                    if (error.data?.message)
+                        return toast.error(error.data?.message);
                 }
                 toast.error("Failed to delete image");
             } finally {
