@@ -1,4 +1,3 @@
-import { ImagePlus, X } from "lucide-react";
 import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
 import { Label } from "~/components/ui/label";
@@ -9,10 +8,10 @@ import {
     SelectTrigger,
     SelectValue,
 } from "~/components/ui/select";
+import { ImageUpload } from "~/components/image-upload";
 import type { FieldErrors, FormImageEntry } from "../../types/product-form-types";
 import { FieldError } from "./form-error-banner";
 import type { Category } from "wle-core";
-
 
 type Props = {
     title: string;
@@ -46,11 +45,9 @@ export function ProductMetaFields({
     onImagesAdd,
     onImageRemove,
 }: Props) {
-    function handleFilePick(e: React.ChangeEvent<HTMLInputElement>) {
-        const files = Array.from(e.target.files ?? []);
-        if (files.length) onImagesAdd(files);
-        e.target.value = "";
-    }
+    const handleFileAdd = (file: File | null) => {
+        if (file) onImagesAdd([file]);
+    };
 
     return (
         <div className="space-y-5">
@@ -131,80 +128,47 @@ export function ProductMetaFields({
                             ({images.length}/4)
                         </span>
                     </Label>
-                    {images.length < 4 && (
-                        <label
-                            htmlFor="image-upload"
-                            className="cursor-pointer inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
-                        >
-                            <ImagePlus className="h-3.5 w-3.5" />
-                            Add images
-                            <input
-                                id="image-upload"
-                                type="file"
-                                accept="image/*"
-                                multiple
-                                className="sr-only"
-                                onChange={handleFilePick}
-                            />
-                        </label>
-                    )}
                 </div>
 
                 {images.length === 0 ? (
-                    <label
-                        htmlFor="image-upload-zone"
-                        className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-border rounded-lg cursor-pointer hover:border-primary/50 hover:bg-muted/30 transition-all group"
-                    >
-                        <ImagePlus className="h-8 w-8 text-muted-foreground group-hover:text-primary/70 transition-colors mb-2" />
-                        <span className="text-sm text-muted-foreground">Click to upload images</span>
-                        <span className="text-xs text-muted-foreground/70 mt-1">PNG, JPG, WEBP — max 4MB each</span>
-                        <input
-                            id="image-upload-zone"
-                            type="file"
-                            accept="image/*"
-                            multiple
-                            className="sr-only"
-                            onChange={handleFilePick}
-                        />
-                    </label>
+                    <ImageUpload
+                        label=""
+                        optionalText=""
+                        accept="image/*"
+                        maxSizeText="PNG, JPG, WEBP — max 4MB each"
+                        onFileChange={handleFileAdd}
+                        onRemoveImage={() => { }}
+                    />
                 ) : (
-                    <div className="grid grid-cols-4 gap-2">
-                        {images.map((img, i) => (
-                            <div key={img._key} className="relative group aspect-square rounded-lg overflow-hidden border border-border">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        {images.map((img, i) => {
+                            const errorMessage = fieldErrors[`images.${i}`]
+                            return <div key={img._key} className="relative">
                                 {i === 0 && (
                                     <span className="absolute top-1 left-1 z-10 text-[9px] font-bold bg-black/60 text-white px-1.5 py-0.5 rounded-sm">
                                         MAIN
                                     </span>
                                 )}
-                                <img
-                                    src={img.previewUrl}
-                                    alt={`Product image ${i + 1}`}
-                                    className="w-full h-full object-cover"
+                                <ImageUpload
+                                    label=""
+                                    optionalText=""
+                                    previewUrl={img.previewUrl}
+                                    onRemoveImage={() => onImageRemove(img._key)}
+                                    onFileChange={handleFileAdd}
+                                    error={errorMessage?.[0]}
                                 />
-                                <button
-                                    type="button"
-                                    onClick={() => onImageRemove(img._key)}
-                                    className="absolute top-1 right-1 z-10 w-5 h-5 rounded-full bg-black/60 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-destructive"
-                                >
-                                    <X className="w-3 h-3" />
-                                </button>
                             </div>
-                        ))}
+                        }
+                        )}
                         {images.length < 4 && (
-                            <label
-                                htmlFor="image-upload-extra"
-                                className="aspect-square rounded-lg border-2 border-dashed border-border flex items-center justify-center cursor-pointer hover:border-primary/50 hover:bg-muted/30 transition-all"
-                            >
-                                <ImagePlus className="h-5 w-5 text-muted-foreground" />
-                                <input
-                                    id="image-upload-extra"
-                                    type="file"
-                                    accept="image/*"
-                                    multiple
-                                    className="sr-only"
-                                    onChange={handleFilePick}
-                                />
-                            </label>
+                            <ImageUpload
+                                label=""
+                                optionalText=""
+                                accept="image/*"
+                                maxSizeText="Add image"
+                                onFileChange={handleFileAdd}
+                                onRemoveImage={() => { }}
+                            />
                         )}
                     </div>
                 )}

@@ -1,12 +1,11 @@
 import { Label } from '~/components/ui/label';
 import { Input } from '~/components/ui/input';
 import { Switch } from '~/components/ui/switch';
-import { Button } from '~/components/ui/button';
-import { ImageIcon, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { LandingBlockFormData } from '../../types/landing-block-form-types';
 import { useLandingBlockFormStore } from '../../stores/use-landing-block-form-store';
 import { BlockContentEditor } from './block-content-editors/block-content-editor';
+import { ImageUpload } from '~/components/image-upload';
 
 // ── Dumb View ─────────────────────────────────────────────────────────────────
 
@@ -72,63 +71,12 @@ export function BlockMetaFieldsView({
             </div>
 
             {/* Image Upload */}
-            <div className="space-y-1.5">
-                <Label className="text-xs font-medium">
-                    Image
-                    <span className="text-muted-foreground ml-1">
-                        (optional, supports drag & drop)
-                    </span>
-                </Label>
-
-                <div className="flex flex-col gap-3">
-                    {previewUrl ? (
-                        <div className="relative w-full max-w-[200px]">
-                            <img
-                                src={previewUrl}
-                                alt="Preview"
-                                className="rounded-md border object-cover w-full h-auto aspect-square"
-                            />
-                            <Button
-                                type="button"
-                                variant="destructive"
-                                size="icon"
-                                className="absolute -top-2 -right-2 h-6 w-6 rounded-full"
-                                onClick={onRemoveImage}
-                            >
-                                <X className="h-3 w-3" />
-                            </Button>
-                        </div>
-                    ) : (
-                        <label
-                            htmlFor="block-image"
-                            className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-md cursor-pointer bg-muted/20 hover:bg-muted/40 transition"
-                        >
-                            <div className="flex flex-col items-center gap-1">
-                                <ImageIcon className="h-6 w-6 text-muted-foreground" />
-                                <span className="text-xs text-muted-foreground">
-                                    Click or drag & drop
-                                </span>
-                                <span className="text-[10px] text-muted-foreground">
-                                    JPG, PNG, GIF, WebP up to 2MB
-                                </span>
-                            </div>
-                            <Input
-                                id="block-image"
-                                type="file"
-                                accept="image/jpeg,image/png,image/jpg,image/gif,image/webp"
-                                className="hidden"
-                                onChange={(e) =>
-                                    onFileChange(e.target.files?.[0] ?? null)
-                                }
-                            />
-                        </label>
-                    )}
-                </div>
-
-                {errors.image && (
-                    <p className="text-xs text-destructive">{errors.image}</p>
-                )}
-            </div>
+            <ImageUpload
+                previewUrl={previewUrl}
+                error={errors.image}
+                onFileChange={onFileChange}
+                onRemoveImage={onRemoveImage}
+            />
 
             {formData.block_type && (
                 <div className="space-y-1.5 pt-2 border-t">

@@ -7,7 +7,7 @@ interface UseProductReturn {
     data: Product | undefined;
     isLoading: boolean;
     error: Error | null;
-    refetch: () => void;
+    refetch: (slug?: string | undefined) => Promise<void>
 }
 
 export const useProduct = (slug?: string): UseProductReturn => {
@@ -15,7 +15,8 @@ export const useProduct = (slug?: string): UseProductReturn => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<Error | null>(null);
 
-    const fetchProduct = useCallback(async () => {
+    const fetchProduct = useCallback(async (slug?: string) => {
+        console.log(slug);
         if (slug && slug === '') {
             setProduct(undefined);
             setIsLoading(false);
@@ -35,11 +36,11 @@ export const useProduct = (slug?: string): UseProductReturn => {
         } finally {
             setIsLoading(false);
         }
-    }, [slug]);
+    }, []);
 
     useEffect(() => {
-        fetchProduct();
-    }, [fetchProduct]);
+        fetchProduct(slug);
+    }, [fetchProduct, slug]);
 
     return { data: product, isLoading, error, refetch: fetchProduct };
 };

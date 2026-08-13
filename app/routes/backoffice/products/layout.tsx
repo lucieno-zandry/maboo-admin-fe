@@ -6,11 +6,17 @@ import { ProductFormDrawer } from './components/form/product-form-drawer';
 import appNavigate from '~/lib/app-navigate';
 import ProductDetailHeader from './components/detail/product-detail-header';
 import ProductDeleteDialog from './components/form/product-delete-dialog';
+import { useProducts } from './hooks/use-products';
+import { useProduct } from './hooks/use-product';
 import type { Product } from 'wle-core';
 
 export default () => {
-    const handleFormSuccess = (product: Product) => {
-        appNavigate(`/products/${product.slug}`);
+    const products = useProducts();
+    const product = useProduct();
+
+    const handleFormSuccess = (updated: Product) => {
+        product.refetch(updated.slug);
+        products.refetch();
     }
 
     const handleDeleteSuccess = () => {
@@ -44,7 +50,7 @@ export default () => {
             </div>
 
             <ProductFormDrawer onSuccess={handleFormSuccess} />
-            <ProductDeleteDialog onSuccess={handleDeleteSuccess}/>
+            <ProductDeleteDialog onSuccess={handleDeleteSuccess} />
         </div>
     );
 };
