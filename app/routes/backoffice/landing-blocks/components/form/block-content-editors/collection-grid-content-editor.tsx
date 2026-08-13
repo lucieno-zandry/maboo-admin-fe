@@ -1,14 +1,15 @@
-// app/routes/backoffice/landing-blocks/components/editors/collection-grid-editor.tsx
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
-import { Plus, Trash2, ArrowUp, ArrowDown, ImageIcon, Loader2, X, GripVertical } from "lucide-react";
+import { Plus, Trash2, ArrowUp, ArrowDown, Loader2, GripVertical } from "lucide-react";
 import { useState } from "react";
 import { useCategoryStore } from "~/hooks/use-category-store";
 import { storeImage, deleteImage } from "~/api/http-requests";
 import { toast } from "sonner";
+import { ImageUpload } from "~/components/image-upload";
 import type { CollectionItem } from "../../../types/landing-block-form-types";
 import type { CollectionContentItem } from "wle-core";
+import { HttpException } from "~/api/app-fetch";
 
 interface Props {
     value: Record<string, any>;
@@ -22,10 +23,9 @@ export function CollectionGridContentEditor({ value, onChange }: Props) {
     })) ?? [];
 
     const { categories } = useCategoryStore();
-    const [uploadingIndex, setUploadingIndex] = useState<number | null>(null);
+    const [busyIndex, setBusyIndex] = useState<number | null>(null);
 
     const updateItems = (newItems: CollectionItem[]) => {
-        // Filter out 
         onChange({
             ...value,
             items: newItems.map(({ imageUrl, image_file, ...item }) => item)
@@ -73,7 +73,7 @@ export function CollectionGridContentEditor({ value, onChange }: Props) {
 
     const handleImageChange = async (index: number, file: File | null) => {
         if (!file) return;
-        setUploadingIndex(index);
+        setBusyIndex(index);
         try {
             const existingId = items[index].image_id;
             if (existingId) {
@@ -87,18 +87,25 @@ export function CollectionGridContentEditor({ value, onChange }: Props) {
         } catch (error) {
             toast.error("Failed to upload image");
         } finally {
-            setUploadingIndex(null);
+            setBusyIndex(null);
         }
     };
 
     const removeImage = async (index: number) => {
         const item = items[index];
         if (item.image_id) {
+            setBusyIndex(index);
             try {
                 await deleteImage(item.image_id);
                 updateItem(index, { image_id: null, image: undefined, });
             } catch (error) {
+                if (error instanceof HttpException) {
+                    if (error.status === 404)
+                        return updateItem(index, { image_id: null, image: undefined })
+                }
                 toast.error("Failed to delete image");
+            } finally {
+                setBusyIndex(null);
             }
         }
     };
@@ -177,7 +184,7 @@ export function CollectionGridContentEditor({ value, onChange }: Props) {
                     <div>
                         <Label className="text-xs">Category</Label>
                         <select
-                            className="w-full rounded-md border p-2"
+                            className="w-full rounded-md border p-2 text-sm"
                             value={item.category_id}
                             onChange={(e) => updateItem(idx, {
                                 category_id: Number(e.target.value),
@@ -204,45 +211,24 @@ export function CollectionGridContentEditor({ value, onChange }: Props) {
                     </div>
 
                     {/* Image upload with preview */}
-                    <div>
-                        <Label className="text-xs">Item image</Label>
-                        <div className="mt-1 flex items-start gap-3">
-                            {(item.imageUrl || (item.image_id && !item.image_file)) && (
-                                <div className="relative w-16 h-16 rounded-md overflow-hidden border bg-muted">
-                                    <img
-                                        src={item.imageUrl ?? `/api/images/${item.image_id}`}
-                                        alt="Preview"
-                                        className="w-full h-full object-cover"
-                                    />
-                                    <Button
-                                        type="button"
-                                        variant="destructive"
-                                        size="icon"
-                                        className="absolute -top-1 -right-1 h-5 w-5 rounded-full"
-                                        onClick={() => removeImage(idx)}
-                                    >
-                                        <X className="h-3 w-3" />
-                                    </Button>
-                                </div>
-                            )}
-                            <label className="flex flex-col items-center justify-center w-32 h-16 border-2 border-dashed rounded-md cursor-pointer bg-muted/20 hover:bg-muted/40 transition">
-                                {uploadingIndex === idx ? (
-                                    <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
-                                ) : (
-                                    <>
-                                        <ImageIcon className="h-4 w-4 text-muted-foreground" />
-                                        <span className="text-[10px] text-muted-foreground mt-1">Upload</span>
-                                    </>
-                                )}
-                                <input
-                                    type="file"
-                                    accept="image/jpeg,image/png,image/webp"
-                                    className="hidden"
-                                    onChange={(e) => handleImageChange(idx, e.target.files?.[0] ?? null)}
-                                    disabled={uploadingIndex === idx}
-                                />
-                            </label>
-                        </div>
+                    <div className="relative">
+                        {busyIndex === idx && (
+                            <div className="absolute inset-0 z-20 bg-background/80 flex flex-col items-center justify-center rounded-md border border-dashed">
+                                <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+                                <span className="text-[10px] text-muted-foreground mt-1">Loading...</span>
+                            </div>
+                        )}
+                        <ImageUpload
+                            label="Item image"
+                            optionalText=""
+                            accept="image/jpeg,image/png,image/webp"
+                            maxSizeText="JPG, PNG, WebP"
+                            previewUrl={
+                                item.imageUrl ?? (item.image_id ? `/api/images/${item.image_id}` : null)
+                            }
+                            onFileChange={(file) => handleImageChange(idx, file)}
+                            onRemoveImage={() => removeImage(idx)}
+                        />
                         {item.image_id && !item.image_file && (
                             <p className="text-[10px] text-muted-foreground mt-1">Image ID: {item.image_id}</p>
                         )}
