@@ -1,7 +1,6 @@
 import { useMemo, useState, type FocusEvent, type SubmitEventHandler } from "react";
-import CustomField from "~/components/custom-ui/field";
 import { FieldGroup } from "~/components/ui/field";
-import Button from "~/components/custom-ui/button";
+import { Button, Field as CustomField } from "wle-ui-package";
 import z from "zod";
 import getUpdatedFormErrors from "~/lib/get-updated-form-errors";
 import { useUserDetailStore } from "~/hooks/use-user-detail-store";

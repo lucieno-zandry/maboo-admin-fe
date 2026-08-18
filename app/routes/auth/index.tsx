@@ -1,13 +1,12 @@
-import Button from "~/components/custom-ui/button";
+import { Button } from "wle-ui-package";
 import { Field, FieldGroup, FieldSeparator } from "~/components/ui/field";
 import type { Route } from "./+types";
 import { getEmailInfo } from "~/api/http-requests";
 import { Form, redirect, useActionData, useNavigation } from "react-router";
 import React from "react";
-import CustomField from "~/components/custom-ui/field";
+import { Field as CustomField, BackButton } from "wle-ui-package";
 import z from "zod";
 import getUpdatedFormErrors from "~/lib/get-updated-form-errors";
-import BackButton from "~/components/back-button";
 
 const emailFormat = z.email();
 

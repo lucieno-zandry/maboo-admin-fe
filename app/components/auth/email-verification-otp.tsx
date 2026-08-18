@@ -13,7 +13,7 @@ import {
 } from "~/components/ui/card";
 import { Form, useNavigation } from "react-router";
 import { Mail } from "lucide-react";
-import Button from "../custom-ui/button";
+import { Button } from "wle-ui-package";
 
 export type EmailVerificationOtpProps = {
     onSendEmailVerificationCode: () => void,

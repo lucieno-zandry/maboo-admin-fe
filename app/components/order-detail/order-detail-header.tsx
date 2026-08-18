@@ -1,10 +1,8 @@
 import { useOrderDetailStore } from "~/hooks/use-order-detail-store";
-import { Badge } from "~/components/ui/badge";
 import { format } from "date-fns";
 import formatPrice from "~/lib/format-price";
 import { StatusBadge } from "../custom-ui/status-badge";
-import BackButton from "../back-button";
-
+import { BackButton } from "wle-ui-package";
 
 export default function OrderDetailHeader() {
     const { order } = useOrderDetailStore();

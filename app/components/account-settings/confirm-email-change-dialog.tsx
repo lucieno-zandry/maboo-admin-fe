@@ -1,7 +1,6 @@
-import z, { email } from "zod";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "../ui/dialog";
-import Field from "../custom-ui/field";
-import Button from "../custom-ui/button";
+import z from "zod";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "../ui/dialog";;
+import { Button, Field } from "wle-ui-package";
 import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
 

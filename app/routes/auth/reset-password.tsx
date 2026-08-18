@@ -4,8 +4,7 @@ import { toast } from "sonner";
 import z from "zod";
 import { HttpException, ValidationException } from "~/api/app-fetch";
 import { resetPassword } from "~/api/http-requests";
-import Button from "~/components/custom-ui/button";
-import Field from "~/components/custom-ui/field";
+import { Button, Field } from "wle-ui-package";
 import { FieldGroup } from "~/components/ui/field";
 import getUpdatedFormErrors from "~/lib/get-updated-form-errors";
 

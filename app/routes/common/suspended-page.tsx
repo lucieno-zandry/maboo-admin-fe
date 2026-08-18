@@ -1,6 +1,6 @@
 import { redirect, useLoaderData, useNavigate, type LoaderFunctionArgs } from "react-router";
 import { Clock, LogOut, ShieldAlert, Calendar } from "lucide-react";
-import Button from "~/components/custom-ui/button";
+import { Button } from "wle-ui-package";
 import useRouterStore from "~/hooks/use-router-store";
 import { useAuthStore } from "~/hooks/use-auth-store";
 import { getCurrentUserStatus, isUserSuspended } from "~/lib/user-status";

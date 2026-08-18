@@ -1,7 +1,7 @@
 // ~/components/categories/category-delete-dialog.tsx
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "~/components/ui/alert-dialog";
 import { useFetcher, useRevalidator } from "react-router";
-import Button from "../custom-ui/button";
+import { Button } from "wle-ui-package";
 import { useEffect, useState } from "react";
 import { HttpException, ValidationException } from "~/api/app-fetch";
 import { toast } from "sonner";
