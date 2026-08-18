@@ -1,6 +1,6 @@
 import { redirect, useNavigate, type LoaderFunctionArgs } from "react-router";
 import { Clock, ShieldCheck, LogOut, RefreshCcw } from "lucide-react";
-import Button from "~/components/custom-ui/button"; // Using your custom-ui button
+import { Button } from "wle-ui-package"; // Using your custom-ui button
 import useRouterStore from "~/hooks/use-router-store";
 import { getAuthUser } from "~/api/http-requests";
 import { useSuccessRedirect } from "~/hooks/use-redirect-action";

@@ -20,8 +20,8 @@ import AuditLogList from "~/components/transaction-detail/audit-log-list";
 import { WebhookLogList } from "~/components/transaction-detail/webhook-log-list";
 import { TransactionOrderCard } from "~/components/transaction-detail/transaction-order-card";
 import { TransactionUserCard } from "~/components/transaction-detail/transaction-user-card";
-import BackButton from "~/components/back-button";
 import TransactionSkeleton from "~/components/transaction-detail/transaction-skeleton";
+import { BackButton } from "wle-ui-package";
 
 export default function TransactionDetailPage() {
     const { transactionUuid } = useParams<{ transactionUuid: string }>();

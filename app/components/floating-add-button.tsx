@@ -1,5 +1,5 @@
 import { Plus } from "lucide-react";
-import Button from "./custom-ui/button";
+import { Button } from "wle-ui-package";
 
 export function FloatingAddButton({ onClick, label }: { onClick: () => void; label: string }) {
     return (
@@ -12,7 +12,7 @@ export function FloatingAddButton({ onClick, label }: { onClick: () => void; lab
         >
             <div className="flex items-center justify-center relative">
                 <Plus size={24} className="transition-transform duration-500 group-hover:rotate-90 flex-shrink-0" />
-                
+
                 <span className="max-w-0 overflow-hidden whitespace-nowrap font-bold transition-all duration-500 
                                  group-hover:max-w-[200px] group-hover:ml-3 opacity-0 group-hover:opacity-100">
                     {label}

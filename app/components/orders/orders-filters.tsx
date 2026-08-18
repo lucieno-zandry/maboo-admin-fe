@@ -3,7 +3,7 @@ import { Input } from "~/components/ui/input";
 import { Filter, Search } from "lucide-react";
 import type { OrdersQueryParams } from "~/types/orders";
 import useDebounce from "~/hooks/use-debounce";
-import Button from "../custom-ui/button";
+import { Button } from "wle-ui-package";
 import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { Badge } from "~/components/ui/badge";
 

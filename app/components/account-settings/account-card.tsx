@@ -3,7 +3,7 @@ import getInitials from "~/lib/get-initials";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Camera, CheckCircle2, Mail, Loader2 } from "lucide-react";
-import Button from "../custom-ui/button";
+import { Button } from "wle-ui-package";
 import { useAuthStore } from "~/hooks/use-auth-store";// adjust import path as needed
 import { toast } from "sonner"; // or your toast library
 import { updateAuthUser } from "~/api/http-requests";

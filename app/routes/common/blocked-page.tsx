@@ -1,6 +1,6 @@
 import { redirect, useLoaderData, useNavigate, type LoaderFunctionArgs } from "react-router";
 import { Ban, LogOut, ShieldAlert } from "lucide-react";
-import Button from "~/components/custom-ui/button";
+import { Button } from "wle-ui-package";
 import useRouterStore from "~/hooks/use-router-store";
 import { getCurrentUserStatus, isUserBlocked } from "~/lib/user-status";
 import { useSuccessRedirect } from "~/hooks/use-redirect-action";
